@@ -35,7 +35,7 @@ class CmdVelPub(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_publisher = CmdVelPub(velocity=-.05)
+    minimal_publisher = CmdVelPub()
 
     rclpy.spin(minimal_publisher)
     # Destroy the node explicitly
@@ -46,7 +46,4 @@ def main(args=None):
 
 
 if __name__ == "__main__":
-    import os
-    print(os.environ["LD_LIBRARY_PATH"])
-    print(os.environ["ROS_DOMAIN_ID"])
     main()
